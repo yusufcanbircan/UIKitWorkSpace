@@ -30,18 +30,35 @@
                                     <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fKF-en-eaB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPL-Od-Sui">
+                                <rect key="frame" x="186" y="382" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fX6-k8-fOq">
+                                <rect key="frame" x="186" y="438" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fX6-k8-fOq" firstAttribute="top" secondItem="oPL-Od-Sui" secondAttribute="bottom" constant="35" id="1q2-Mg-CwR"/>
                             <constraint firstItem="iBp-pd-t68" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FDL-Rx-3MR"/>
                             <constraint firstItem="iBp-pd-t68" firstAttribute="top" secondItem="rOT-cF-DPz" secondAttribute="bottom" constant="339" id="Fhp-M3-bi8"/>
+                            <constraint firstItem="fX6-k8-fOq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blc-Ho-YK6"/>
                             <constraint firstItem="rOT-cF-DPz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="exA-GD-wh0"/>
                             <constraint firstItem="rOT-cF-DPz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="gFs-KI-4do"/>
+                            <constraint firstItem="oPL-Od-Sui" firstAttribute="top" secondItem="rOT-cF-DPz" secondAttribute="bottom" constant="141" id="jfd-oi-Eg8"/>
+                            <constraint firstItem="oPL-Od-Sui" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uZY-5n-tEi"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="rOT-cF-DPz" id="nkb-MG-Moo"/>
+                        <outletCollection property="labels" destination="oPL-Od-Sui" collectionClass="NSMutableArray" id="bdm-e6-QjC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
