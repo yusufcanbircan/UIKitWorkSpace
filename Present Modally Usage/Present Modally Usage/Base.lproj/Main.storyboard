@@ -68,6 +68,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx1-Nc-xNl">
+                                <rect key="frame" x="169.5" y="656" width="75" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissButton:" destination="d01-zD-oeK" eventType="touchUpInside" id="xSU-Ai-4C9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ir8-L4-lYB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -76,6 +84,8 @@
                             <constraint firstItem="qJ7-c6-RMX" firstAttribute="centerX" secondItem="HSW-y2-dZy" secondAttribute="centerX" id="3YO-eG-Zyu"/>
                             <constraint firstItem="qi4-Le-sCD" firstAttribute="top" secondItem="Ir8-L4-lYB" secondAttribute="top" constant="115" id="Qom-Jq-dmV"/>
                             <constraint firstItem="qi4-Le-sCD" firstAttribute="centerX" secondItem="HSW-y2-dZy" secondAttribute="centerX" id="j2n-bx-v3K"/>
+                            <constraint firstItem="Jx1-Nc-xNl" firstAttribute="top" secondItem="qJ7-c6-RMX" secondAttribute="bottom" constant="49" id="wtu-E7-hMe"/>
+                            <constraint firstItem="Jx1-Nc-xNl" firstAttribute="centerX" secondItem="HSW-y2-dZy" secondAttribute="centerX" id="zGX-2k-nyS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IMW-37-WOg"/>
@@ -133,6 +143,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="CHm-PT-PUg"/>
         <segue reference="2m6-Gg-N3a"/>
     </inferredMetricsTieBreakers>
     <resources>
