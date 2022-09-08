@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TransitionBetweenPageWithCode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page1" id="BYZ-38-t0r" customClass="ViewController" customModule="TransitionBetweenPageWithCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
         <!--View Controller2-->
         <scene sceneID="RkX-pr-0DF">
             <objects>
-                <viewController id="Kww-rs-xSP" customClass="ViewController2" customModule="TransitionBetweenPageWithCode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page2" id="Kww-rs-xSP" customClass="ViewController2" customModule="TransitionBetweenPageWithCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2gO-dc-0b8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,12 +51,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-2K-pmF">
+                                <rect key="frame" x="171" y="411" width="72.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="dismiss"/>
+                                <connections>
+                                    <action selector="dismissButton:" destination="Kww-rs-xSP" eventType="touchUpInside" id="8dr-ff-zEO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mDP-G1-Yvf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6IB-2K-pmF" firstAttribute="top" secondItem="eqn-d3-CcQ" secondAttribute="bottom" constant="174" id="XdF-QF-7iW"/>
                             <constraint firstItem="eqn-d3-CcQ" firstAttribute="centerX" secondItem="2gO-dc-0b8" secondAttribute="centerX" id="XfU-48-37y"/>
                             <constraint firstItem="eqn-d3-CcQ" firstAttribute="top" secondItem="mDP-G1-Yvf" secondAttribute="top" constant="172" id="Ybr-aj-rBG"/>
+                            <constraint firstItem="6IB-2K-pmF" firstAttribute="centerX" secondItem="2gO-dc-0b8" secondAttribute="centerX" id="ZTg-nv-5cC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xrr-Nw-IfM"/>

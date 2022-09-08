@@ -16,10 +16,13 @@ class ViewController: UIViewController {
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         
-        let vc = ViewController2()
-        vc.modalPresentationStyle = .automatic
+        let storyboard = UIStoryboard(name:"Main", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "page2") as! ViewController2
+        vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .coverVertical
-        present(vc, animated: true, completion: nil)
+        self.present(vc, animated: true)
+        
     }
     
 }
