@@ -27,7 +27,12 @@ class ViewControllerA: UIViewController {
         
         vc.message = textField.text!
         
-        self.present(vc, animated: true, completion: nil)
+        
+        // with present modally
+        //self.present(vc, animated: true, completion: nil)
+        
+        // with navigation show segue
+        self.navigationController?.pushViewController(vc, animated: true)
         
         
         
