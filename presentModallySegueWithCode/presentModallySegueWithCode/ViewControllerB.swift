@@ -13,11 +13,14 @@ class ViewControllerB: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     var message: String?
+    var person =  Person()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.text = message!
+        
+        
+        label.text = person.name
         
     }
     

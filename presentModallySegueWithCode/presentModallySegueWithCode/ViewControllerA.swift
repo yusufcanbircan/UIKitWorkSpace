@@ -27,6 +27,11 @@ class ViewControllerA: UIViewController {
         
         vc.message = textField.text!
         
+        let person = Person(name: "yusuf", id: 19)
+        
+        vc.person = person
+        
+        
         
         // with present modally
         //self.present(vc, animated: true, completion: nil)
