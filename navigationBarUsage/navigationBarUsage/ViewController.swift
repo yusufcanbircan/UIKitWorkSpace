@@ -16,8 +16,29 @@ class ViewController: UIViewController {
         self.navigationItem.prompt = "With"
         
         self.navigationItem.largeTitleDisplayMode = .automatic
+        
+        // adding an image to title
+        /*
+         let image = UIImage(named: "image")
+         
+         self.navigationItem.titleview = UIImageView(image: image)
+         
+         */
     }
 
-
+    @IBAction func segmentedTapped(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            print("first tapped")
+            
+        case 1:
+            print("second tapped")
+            
+        default:
+            break
+        }
+    }
+    
 }
 
