@@ -16,6 +16,25 @@ class ViewController: UIViewController {
         self.navigationItem.prompt = "With"
         
         self.navigationItem.largeTitleDisplayMode = .automatic
+        // custom navigation controller
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = UIColor.blue
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.barStyle = .black
+        
+        navigationController?.navigationBar.isTranslucent = true
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
+        
         
         // adding an image to title
         /*
