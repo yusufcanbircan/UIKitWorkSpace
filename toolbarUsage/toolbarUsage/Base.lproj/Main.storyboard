@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="toolbarUsage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koH-RN-lu4">
+                                <rect key="frame" x="0.0" y="849" width="430" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="ef7-S7-vIA">
+                                        <connections>
+                                            <action selector="backwardButtonTapped:" destination="BYZ-38-t0r" id="aZS-Rp-vUO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="143" style="plain" systemItem="fixedSpace" id="0eD-AN-fC0"/>
+                                    <barButtonItem systemItem="play" id="AES-cO-XoW">
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="BYZ-38-t0r" id="Glh-8w-eVx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="141" style="plain" systemItem="fixedSpace" id="5M3-Kn-38c"/>
+                                    <barButtonItem systemItem="fastForward" id="jKb-qg-JcE">
+                                        <connections>
+                                            <action selector="forwardButtonTapped:" destination="BYZ-38-t0r" id="Pvo-ne-Hf3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for action..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3D-xf-1YW">
+                                <rect key="frame" x="113" y="802" width="204" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="koH-RN-lu4" firstAttribute="top" secondItem="J3D-xf-1YW" secondAttribute="bottom" constant="17" id="CkD-ZC-8Ro"/>
+                            <constraint firstItem="koH-RN-lu4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aLH-Iv-uQh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="koH-RN-lu4" secondAttribute="bottom" id="ewF-Qj-b0O"/>
+                            <constraint firstItem="koH-RN-lu4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kjU-oa-hKb"/>
+                            <constraint firstItem="J3D-xf-1YW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdP-3V-GNn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="J3D-xf-1YW" id="hnn-Ga-CMN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
