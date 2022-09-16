@@ -42,7 +42,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7e-qF-VCE">
                                 <rect key="frame" x="257.66666666666669" y="553" width="79.333333333333314" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Send C"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Send C" cornerStyle="capsule"/>
                                 <connections>
                                     <action selector="sendC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4tb-Bs-XPX"/>
                                 </connections>

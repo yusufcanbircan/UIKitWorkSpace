@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="switchSegmentedUsage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zvf-YZ-3W0">
+                                <rect key="frame" x="190.66666666666666" y="242" width="51" height="31"/>
+                                <color key="onTintColor" systemColor="systemPinkColor"/>
+                                <color key="thumbTintColor" systemColor="systemGray3Color"/>
+                                <connections>
+                                    <action selector="switchButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="aFf-Zl-G1K"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LHt-g4-SOR">
+                                <rect key="frame" x="149.66666666666666" y="363" width="130.99999999999997" height="32"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="selectedSegmentTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segmentedButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="xVb-B7-hu6"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nN7-wq-eeY">
+                                <rect key="frame" x="194" y="612" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LHt-g4-SOR" firstAttribute="top" secondItem="Zvf-YZ-3W0" secondAttribute="bottom" constant="90" id="354-og-0o8"/>
+                            <constraint firstItem="Zvf-YZ-3W0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="39L-Y9-4i9"/>
+                            <constraint firstItem="nN7-wq-eeY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3ex-eb-Ulz"/>
+                            <constraint firstItem="LHt-g4-SOR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BfO-zu-F3m"/>
+                            <constraint firstItem="nN7-wq-eeY" firstAttribute="top" secondItem="LHt-g4-SOR" secondAttribute="bottom" constant="218" id="LHl-IY-C2e"/>
+                            <constraint firstItem="Zvf-YZ-3W0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="183" id="xlO-bn-GKB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="nN7-wq-eeY" id="LyX-xe-eIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
