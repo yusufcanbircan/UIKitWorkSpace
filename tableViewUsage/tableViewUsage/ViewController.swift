@@ -43,6 +43,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(countries[indexPath.row])")
     }
+    
+    // trailing usage
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "delete", handler: {(contextualAction, view, boolValue) in
+            print("\(self.countries[indexPath.row]) deleted")
+        })
+        
+        let editAction = UIContextualAction(style: .normal, title: "edit", handler: {(contextualAction, view, boolValue) in
+            print("\(self.countries[indexPath.row]) edited")
+        })
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+        
+    }
 
 
 
