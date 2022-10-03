@@ -29,7 +29,11 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDelegate, UITableViewDataSource, TableViewCellProtocol{
+    func cellButtonTapped(indexPath: IndexPath) {
+        print("deleted \(person[indexPath.row].name!)")
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -45,6 +49,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath) as! TableViewCell
         
         cell.nameLabel.text = providedPerson.name
+        
+        cell.cellProtocol = self
+        cell.indexPath = indexPath
         
         return cell
     }
