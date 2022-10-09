@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fileOperationsUsage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sWx-32-fVB">
+                                <rect key="frame" x="40" y="109" width="350" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFy-YC-ohE">
+                                <rect key="frame" x="47" y="190" width="62" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="write"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mx4-s6-C2N">
+                                <rect key="frame" x="186" y="190" width="59" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="read"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDh-Yq-NOf">
+                                <rect key="frame" x="317" y="190" width="72" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="delete"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkB-sA-mqK">
+                                <rect key="frame" x="21" y="255" width="113" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="write image"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0Y-bU-rx1">
+                                <rect key="frame" x="158" y="255" width="115" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="show image"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7i-6K-Ud2">
+                                <rect key="frame" x="292" y="255" width="122" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="delete image"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2tC-OI-vrq">
+                                <rect key="frame" x="40" y="331" width="350" height="551"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="551" id="dc3-yR-Rno"/>
+                                    <constraint firstAttribute="width" constant="350" id="hTx-PD-6U2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sWx-32-fVB" secondAttribute="trailing" constant="40" id="0VS-oH-JNS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y7i-6K-Ud2" secondAttribute="trailing" constant="16" id="1Yu-jf-uga"/>
+                            <constraint firstItem="aFy-YC-ohE" firstAttribute="top" secondItem="sWx-32-fVB" secondAttribute="bottom" constant="47" id="2f2-4t-Ad1"/>
+                            <constraint firstItem="mx4-s6-C2N" firstAttribute="top" secondItem="sWx-32-fVB" secondAttribute="bottom" constant="47" id="5lD-Rj-nnn"/>
+                            <constraint firstItem="M0Y-bU-rx1" firstAttribute="top" secondItem="mx4-s6-C2N" secondAttribute="bottom" constant="30" id="9jl-VP-nbe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2tC-OI-vrq" secondAttribute="trailing" constant="40" id="9y8-SD-3HI"/>
+                            <constraint firstItem="mDh-Yq-NOf" firstAttribute="leading" secondItem="mx4-s6-C2N" secondAttribute="trailing" constant="72" id="Alj-oe-dB1"/>
+                            <constraint firstItem="OkB-sA-mqK" firstAttribute="top" secondItem="aFy-YC-ohE" secondAttribute="bottom" constant="30" id="DCC-sV-Gj0"/>
+                            <constraint firstItem="sWx-32-fVB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="De1-hq-CfP"/>
+                            <constraint firstItem="Y7i-6K-Ud2" firstAttribute="leading" secondItem="M0Y-bU-rx1" secondAttribute="trailing" constant="19" id="Key-f4-TVA"/>
+                            <constraint firstItem="aFy-YC-ohE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="W3T-BH-qRU"/>
+                            <constraint firstItem="2tC-OI-vrq" firstAttribute="top" secondItem="OkB-sA-mqK" secondAttribute="bottom" constant="41" id="XPv-CW-yHk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2tC-OI-vrq" secondAttribute="bottom" constant="16" id="bLk-kV-7KZ"/>
+                            <constraint firstItem="mx4-s6-C2N" firstAttribute="leading" secondItem="aFy-YC-ohE" secondAttribute="trailing" constant="77" id="bXy-q0-sx3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mDh-Yq-NOf" secondAttribute="trailing" constant="41" id="cb3-02-ww8"/>
+                            <constraint firstItem="OkB-sA-mqK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="e6g-qm-KNx"/>
+                            <constraint firstItem="M0Y-bU-rx1" firstAttribute="leading" secondItem="OkB-sA-mqK" secondAttribute="trailing" constant="24" id="f3u-Aj-wIN"/>
+                            <constraint firstItem="mDh-Yq-NOf" firstAttribute="top" secondItem="sWx-32-fVB" secondAttribute="bottom" constant="47" id="iAS-hN-K82"/>
+                            <constraint firstItem="sWx-32-fVB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="nvP-Gf-ZDY"/>
+                            <constraint firstItem="Y7i-6K-Ud2" firstAttribute="top" secondItem="mDh-Yq-NOf" secondAttribute="bottom" constant="30" id="pxf-1m-sw2"/>
+                            <constraint firstItem="2tC-OI-vrq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="qi6-ec-5Is"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.74418604651163" y="3.8626609442060089"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
