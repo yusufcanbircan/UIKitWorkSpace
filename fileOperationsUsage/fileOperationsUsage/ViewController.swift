@@ -71,12 +71,44 @@ class ViewController: UIViewController {
     }
     
     @IBAction func writeImageButton(_ sender: Any) {
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let filePath = dir.appendingPathExtension("image.png")
+            
+            let image = UIImage(named: "2048")
+            
+            do {
+                
+                try image!.pngData()?.write(to: filePath)
+                
+            } catch {
+                print("Error while image writing!")
+            }
+        }
     }
     
     @IBAction func showImageButton(_ sender: Any) {
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let filePath = dir.appendingPathExtension("image.png")
+            
+            self.imageView.image = UIImage(contentsOfFile: filePath.path)
+        }
+        
     }
     
     @IBAction func deleteImageButton(_ sender: Any) {
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let filePath = dir.appendingPathExtension("image.png")
+            
+            do {
+                try FileManager.default.removeItem(at: filePath)
+            } catch {
+                print("Error while image deleting!")
+            }
+        }
+        
     }
 }
 
