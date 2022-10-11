@@ -26,31 +26,49 @@
                                 <rect key="frame" x="47" y="190" width="62" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="write"/>
+                                <connections>
+                                    <action selector="writeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ntb-xR-7Gd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mx4-s6-C2N">
                                 <rect key="frame" x="186" y="190" width="59" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="read"/>
+                                <connections>
+                                    <action selector="readButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqN-pR-pYH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDh-Yq-NOf">
                                 <rect key="frame" x="317" y="190" width="72" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="delete"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K3V-7E-COg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkB-sA-mqK">
                                 <rect key="frame" x="21" y="255" width="113" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="write image"/>
+                                <connections>
+                                    <action selector="writeImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="viO-Wm-nWZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0Y-bU-rx1">
                                 <rect key="frame" x="158" y="255" width="115" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="show image"/>
+                                <connections>
+                                    <action selector="showImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rRP-nE-BZV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7i-6K-Ud2">
                                 <rect key="frame" x="292" y="255" width="122" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="delete image"/>
+                                <connections>
+                                    <action selector="deleteImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AwT-1h-zI1"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2tC-OI-vrq">
                                 <rect key="frame" x="40" y="331" width="350" height="551"/>
@@ -86,6 +104,10 @@
                             <constraint firstItem="2tC-OI-vrq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="qi6-ec-5Is"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="2tC-OI-vrq" id="0Si-jD-bAg"/>
+                        <outlet property="textField" destination="sWx-32-fVB" id="0Hw-eO-LDy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
