@@ -41,6 +41,7 @@ extension ViewController: UISearchBarDelegate {
         
         tableView.reloadData()
     }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
