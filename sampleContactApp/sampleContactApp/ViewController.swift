@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     
     var contact:[Contact] = [Contact]()
     
+    var searchingText: String?
+    var isSearching: Bool = false
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +34,11 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        showContacts()
+        if isSearching {
+            fetchFilteredData(searchText: searchingText!)
+        } else {
+            showContacts()
+        }
         personTableView.reloadData()
     }
     
@@ -96,7 +103,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
             appDelegate.saveContext()
             
-            self.showContacts()
+            if self.isSearching {
+                self.fetchFilteredData(searchText: self.searchingText!)
+            } else {
+                self.showContacts()
+            }
+            
             self.personTableView.reloadData()
             
         })
@@ -117,7 +129,30 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("\(searchText)")
+        searchingText = searchText
+        
+        if searchText == "" {
+            isSearching = false
+            showContacts()
+        } else {
+            isSearching = true
+            fetchFilteredData(searchText: searchText)
+        }
+        
+        personTableView.reloadData()
+    }
+    
+    func fetchFilteredData(searchText: String) {
+        let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
+        
+        fetchRequest.predicate = NSPredicate(format: "person_name CONTAINS %@", searchText)
+        
+        do {
+            contact = try context.fetch(fetchRequest)
+        } catch {
+            print("Fetching Error!")
+        }
+        
     }
 }
 
