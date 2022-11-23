@@ -88,5 +88,52 @@ class ContactsDao {
         
         return contactList
     }
+    
+    func contactControl(person_name: String) -> Int {
+        var result = 0
+        
+        db?.open()
+        
+        do {
+            
+            let rs = try db!.executeQuery("SELECT count(*) as result FROM Person WHERE person_name = ?", values: [person_name])
+            
+            while rs.next() {
+                result = Int(rs.string(forColumn: "result"))!
+            }
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
+        
+        return result
+    }
+    
+    func searchContact(person_name: String) -> [Contacts] {
+        var list = [Contacts]()
+        
+        db?.open()
+        
+        do {
+            
+            let rs = try db!.executeQuery("SELECT * FROM Person WHERE person_name like '%\(person_name)%'", values: nil)
+            
+            while rs.next() {
+                let person = Contacts(person_name: rs.string(forColumn: "person_name")!,
+                                      person_id: Int(rs.string(forColumn: "person_id"))!,
+                                      person_age: Int(rs.string(forColumn: "person_old"))!)
+                list.append(person)
+            }
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
+        
+        return list
+    }
         
 }

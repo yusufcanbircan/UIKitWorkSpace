@@ -13,21 +13,36 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         copyDatabase()
         
-        // Add Contact
+        //// Add Contact
         //ContactsDao().addContact(person_id: 10, person_name: "Yusufcan", person_age: 24)
         
-        // Delete Contact
-        ContactsDao().deleteContact(person_id: 10)
         
-        // Update Contact
-        ContactsDao().updateContact(person_id: 9, person_name: "Musabb", person_age: 23)
+        //// Delete Contact
+        //ContactsDao().deleteContact(person_id: 10)
         
         
+        //// Update Contact
+        //ContactsDao().updateContact(person_id: 9, person_name: "Musabb", person_age: 23)
         
-        let receivedList = ContactsDao().fetchAllContacts()
+        
+        //// Contact Control
+        //let result = ContactsDao().contactControl(person_name: "Yusuf")
+        //print("There are \(result) yusuf in database!")
+        
+        
+        //// Search in Contacts
+        let receivedList = ContactsDao().searchContact(person_name: "e")
+        
+        
+        //// Fetch All Contacts
+        //let receivedList = ContactsDao().fetchAllContacts()
+        
+        
+        //// Print Contact List
         for contact in receivedList {
             print("Person Id: \(contact.person_id!) - Person Name: \(contact.person_name!) - Person Age: \(contact.person_age!)")
         }
+        
     }
     
     func copyDatabase() {
