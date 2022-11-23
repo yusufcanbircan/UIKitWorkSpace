@@ -43,8 +43,12 @@ class ViewController: UIViewController {
         print("The Contact is \(contactFromId.person_name!)")
         
         
-        ///// Fetch Contacts With Limit
-        let receivedList = ContactsDao().fetchContactsWithLimit(limit: 6)
+        //// Fetch Contacts With Limit
+        //let receivedList = ContactsDao().fetchContactsWithLimit(limit: 6)
+        
+        
+        //// Fetch Contacts Randomly
+        let receivedList = ContactsDao().fetchContactsRandom(limit: 3)
         
         
         //// Print Contact List

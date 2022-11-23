@@ -184,8 +184,35 @@ class ContactsDao {
         
         db?.close()
         
+        return list
+    }
+    
+    func fetchContactsRandom(limit:Int) -> [Contacts] {
+        
+        var list = [Contacts]()
+        
+        db?.open()
+        
+        do {
+            
+            let rs = try db!.executeQuery("SELECT * FROM Person ORDER BY RANDOM() LIMIT ?", values: [limit])
+            
+            while rs.next() {
+                let person = Contacts(person_name: rs.string(forColumn: "person_name")!,
+                                      person_id: Int(rs.string(forColumn: "person_id"))!,
+                                      person_age: Int(rs.string(forColumn: "person_old"))!)
+                list.append(person)
+            }
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
         
         return list
     }
+    
+    
         
 }
