@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         
         
         //// Search in Contacts
-        let receivedList = ContactsDao().searchContact(person_name: "e")
+        //let receivedList = ContactsDao().searchContact(person_name: "e")
         
         
         //// Fetch All Contacts
@@ -41,6 +41,10 @@ class ViewController: UIViewController {
         //// Fetch Contact From Id
         let contactFromId = ContactsDao().fetchTheContact(person_id: 2)
         print("The Contact is \(contactFromId.person_name!)")
+        
+        
+        ///// Fetch Contacts With Limit
+        let receivedList = ContactsDao().fetchContactsWithLimit(limit: 6)
         
         
         //// Print Contact List
