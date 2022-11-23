@@ -135,5 +135,30 @@ class ContactsDao {
         
         return list
     }
+    
+    func fetchTheContact(person_id: Int) -> Contacts {
+        
+        var person = Contacts()
+        
+        db?.open()
+        
+        do {
+            
+            let rs = try db!.executeQuery("SELECT * FROM Person WHERE person_id = ?", values: [person_id])
+            
+            while rs.next() {
+                person = Contacts(person_name: rs.string(forColumn: "person_name")!,
+                                  person_id: Int(rs.string(forColumn: "person_id"))!,
+                                  person_age: Int(rs.string(forColumn: "person_old"))!)
+            }
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
+        
+        return person
+    }
         
 }

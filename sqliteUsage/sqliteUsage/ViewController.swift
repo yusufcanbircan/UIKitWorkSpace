@@ -38,6 +38,11 @@ class ViewController: UIViewController {
         //let receivedList = ContactsDao().fetchAllContacts()
         
         
+        //// Fetch Contact From Id
+        let contactFromId = ContactsDao().fetchTheContact(person_id: 2)
+        print("The Contact is \(contactFromId.person_name!)")
+        
+        
         //// Print Contact List
         for contact in receivedList {
             print("Person Id: \(contact.person_id!) - Person Name: \(contact.person_name!) - Person Age: \(contact.person_age!)")
