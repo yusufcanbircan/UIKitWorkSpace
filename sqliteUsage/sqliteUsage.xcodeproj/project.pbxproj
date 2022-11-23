@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB3CBB51292E4213002ED711 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3CBB50292E4213002ED711 /* Contacts.swift */; };
+		BB3CBB53292E425D002ED711 /* ContactsDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3CBB52292E425D002ED711 /* ContactsDao.swift */; };
 		BB5CAF9E290136B100BE7ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5CAF9D290136B100BE7ACC /* AppDelegate.swift */; };
 		BB5CAFA0290136B100BE7ACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5CAF9F290136B100BE7ACC /* SceneDelegate.swift */; };
 		BB5CAFA2290136B100BE7ACC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5CAFA1290136B100BE7ACC /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB3CBB50292E4213002ED711 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		BB3CBB52292E425D002ED711 /* ContactsDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDao.swift; sourceTree = "<group>"; };
 		BB5CAF9A290136B100BE7ACC /* sqliteUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sqliteUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5CAF9D290136B100BE7ACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB5CAF9F290136B100BE7ACC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 				BB5CAFBE2901373000BE7ACC /* FMResultSet.m */,
 				BB5CAFB32901372E00BE7ACC /* sqliteUsage-Bridging-Header.h */,
 				BB5CAFC42901396600BE7ACC /* contactsFirst.sqlite */,
+				BB3CBB50292E4213002ED711 /* Contacts.swift */,
+				BB3CBB52292E425D002ED711 /* ContactsDao.swift */,
 			);
 			path = sqliteUsage;
 			sourceTree = "<group>";
@@ -184,6 +190,8 @@
 			files = (
 				BB5CAFA2290136B100BE7ACC /* ViewController.swift in Sources */,
 				BB5CAFBF2901373000BE7ACC /* FMDatabasePool.m in Sources */,
+				BB3CBB51292E4213002ED711 /* Contacts.swift in Sources */,
+				BB3CBB53292E425D002ED711 /* ContactsDao.swift in Sources */,
 				BB5CAF9E290136B100BE7ACC /* AppDelegate.swift in Sources */,
 				BB5CAFC22901373000BE7ACC /* FMDatabase.m in Sources */,
 				BB5CAFA0290136B100BE7ACC /* SceneDelegate.swift in Sources */,
