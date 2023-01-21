@@ -13,7 +13,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //addPerson()
-        updatePerson(id: 14226, ad: "newYusuf", tel: 404040)
+        //updatePerson(id: 14226, ad: "newYusuf", tel: 404040)
+        deletePerson(id: 14226)
     }
     
     func addPerson() {
@@ -53,6 +54,33 @@ class ViewController: UIViewController {
             
             if error != nil || data == nil {
                 print("errorrr")
+                return
+            }
+            
+            do {
+                
+                if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
+                    print(json)
+                }
+                
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+        }.resume()
+    }
+    
+    func deletePerson(id:Int) {
+        var request = URLRequest(url: URL(string: "http://kasimadalan.pe.hu/kisiler/delete_kisiler.php")!)
+        request.httpMethod = "POST"
+        
+        let postString = "kisi_id=\(id)"
+        request.httpBody = postString.data(using: .utf8)
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if error != nil || data == nil {
+                print("error")
                 return
             }
             
