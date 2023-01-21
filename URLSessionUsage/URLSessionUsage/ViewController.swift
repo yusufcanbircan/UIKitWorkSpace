@@ -15,8 +15,8 @@ class ViewController: UIViewController {
         //addPerson()
         //updatePerson(id: 14226, ad: "newYusuf", tel: 404040)
         //deletePerson(id: 14226)
-        //fetchAll()
-        search(searchText: "a")
+        fetchAll()
+        //search(searchText: "a")
     }
     
     func addPerson() {
@@ -112,7 +112,15 @@ class ViewController: UIViewController {
             do {
                 
                 if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
-                    print(json)
+                    
+                    if let people = json["kisiler"] as? [[String: Any]] {
+                        for person in people {
+                            print("Person Id: \(person["kisi_id"]!)")
+                            print("Person Name: \(person["kisi_ad"]!)")
+                            print("Person Phone: \(person["kisi_tel"]!) \n")
+                        }
+                    }
+                    
                 }
                 
             } catch {
