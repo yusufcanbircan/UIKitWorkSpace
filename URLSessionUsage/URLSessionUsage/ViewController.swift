@@ -13,6 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //addPerson()
+        updatePerson(id: 14226, ad: "newYusuf", tel: 404040)
     }
     
     func addPerson() {
@@ -38,6 +39,33 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         
+        }.resume()
+    }
+    
+    func updatePerson(id:Int, ad:String, tel: Int) {
+        var request = URLRequest(url: URL(string: "http://kasimadalan.pe.hu/kisiler/update_kisiler.php")!)
+        request.httpMethod = "POST"
+        
+        let postString = "kisi_id=\(id) & kisi_ad=\(ad) & kisi_tel=\(tel)"
+        request.httpBody = postString.data(using: .utf8)
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if error != nil || data == nil {
+                print("errorrr")
+                return
+            }
+            
+            do {
+                
+                if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
+                    print(json)
+                }
+                
+            } catch {
+                print(error.localizedDescription)
+            }
+            
         }.resume()
     }
 }
