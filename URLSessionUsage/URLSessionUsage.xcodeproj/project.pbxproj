@@ -13,6 +13,8 @@
 		BB1214D1297C25FC00FA2C81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1214CF297C25FC00FA2C81 /* Main.storyboard */; };
 		BB1214D3297C25FE00FA2C81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1214D2297C25FE00FA2C81 /* Assets.xcassets */; };
 		BB1214D6297C25FE00FA2C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1214D4297C25FE00FA2C81 /* LaunchScreen.storyboard */; };
+		BB1214DE297C55FC00FA2C81 /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1214DD297C55FC00FA2C81 /* Kisiler.swift */; };
+		BB1214E0297C566B00FA2C81 /* KisilerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1214DF297C566B00FA2C81 /* KisilerResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BB1214D2297C25FE00FA2C81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB1214D5297C25FE00FA2C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB1214D7297C25FE00FA2C81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB1214DD297C55FC00FA2C81 /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
+		BB1214DF297C566B00FA2C81 /* KisilerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				BB1214D2297C25FE00FA2C81 /* Assets.xcassets */,
 				BB1214D4297C25FE00FA2C81 /* LaunchScreen.storyboard */,
 				BB1214D7297C25FE00FA2C81 /* Info.plist */,
+				BB1214DD297C55FC00FA2C81 /* Kisiler.swift */,
+				BB1214DF297C566B00FA2C81 /* KisilerResponse.swift */,
 			);
 			path = URLSessionUsage;
 			sourceTree = "<group>";
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB1214CE297C25FC00FA2C81 /* ViewController.swift in Sources */,
+				BB1214E0297C566B00FA2C81 /* KisilerResponse.swift in Sources */,
 				BB1214CA297C25FC00FA2C81 /* AppDelegate.swift in Sources */,
 				BB1214CC297C25FC00FA2C81 /* SceneDelegate.swift in Sources */,
+				BB1214DE297C55FC00FA2C81 /* Kisiler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

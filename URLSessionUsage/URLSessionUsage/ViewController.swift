@@ -111,7 +111,16 @@ class ViewController: UIViewController {
             
             do {
                 
-                if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
+                let response = try JSONDecoder().decode(KisilerResponse.self, from: data!)
+                
+                for person in response.kisiler! {
+                    print("Person Id: \(person.kisi_id!)")
+                    print("Person Name: \(person.kisi_ad!)")
+                    print("Person Phone: \(person.kisi_tel!) \n")
+                }
+                
+                
+                /*if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
                     
                     if let people = json["kisiler"] as? [[String: Any]] {
                         for person in people {
@@ -121,7 +130,7 @@ class ViewController: UIViewController {
                         }
                     }
                     
-                }
+                }*/
                 
             } catch {
                 print(error.localizedDescription)
